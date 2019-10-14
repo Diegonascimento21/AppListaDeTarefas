@@ -65,7 +65,7 @@
 
 			}
 
-			function remover(id){
+			function remover(id) {				
 				location.href = 'todas_tarefas.php?acao=remover&id='+id;
 			}
 		</script>
