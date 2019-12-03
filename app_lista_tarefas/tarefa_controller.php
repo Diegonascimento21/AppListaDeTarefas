@@ -49,6 +49,16 @@
 
 		header('location: todas_tarefas.php');
 
+	}else if($acao == 'concluir') {
+		$tarefa = new Tarefa();
+		$tarefa->__set('id', $_GET['id'])->__set('id_status', 2);
+
+		$conexao = new Conexao();
+
+		$tarefaService = new TarefaService($conexao, $tarefa);
+		$tarefaService->concluir();
+		header('location: todas_tarefas.php');
+
 	}
 
    
